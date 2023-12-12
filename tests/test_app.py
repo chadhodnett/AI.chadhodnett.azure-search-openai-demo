@@ -10,7 +10,6 @@ from openai import BadRequestError
 
 import app
 
-
 pytestmark = pytest.mark.skip("test for original demo data")
 
 
