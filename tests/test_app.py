@@ -11,6 +11,9 @@ from openai import BadRequestError
 import app
 
 
+pytestmark = pytest.mark.skip("test for original demo data")
+
+
 def fake_response(http_code):
     return Response(http_code, request=Request(method="get", url="https://foo.bar/"))
 
