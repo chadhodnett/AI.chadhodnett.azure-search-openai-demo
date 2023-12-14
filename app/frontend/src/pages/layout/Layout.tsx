@@ -2,6 +2,8 @@ import { Outlet, NavLink, Link } from "react-router-dom";
 
 import github from "../../assets/github.svg";
 
+import nucor from "../../assets/nucor.png";
+
 import styles from "./Layout.module.css";
 
 import { useLogin } from "../../authConfig";
@@ -14,7 +16,7 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>NBT MES | PSI Code Guidelines | Test</h3>
+                        <h3 className={styles.headerTitle}>NBT MES | PSI Code Guidelines</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -28,7 +30,7 @@ const Layout = () => {
                                     Ask a question
                                 </NavLink>
                             </li>
-                            <li className={styles.headerNavLeftMargin}>
+                            {/* <li className={styles.headerNavLeftMargin}>
                                 <a href="https://aka.ms/entgptsearch" target={"_blank"} title="Github repository link">
                                     <img
                                         src={github}
@@ -39,10 +41,12 @@ const Layout = () => {
                                         className={styles.githubLogo}
                                     />
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + AI Search</h4>
+                    <h4 className={styles.headerRightText}>
+                        <img src={nucor} alt="Nucor logo" />
+                    </h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>

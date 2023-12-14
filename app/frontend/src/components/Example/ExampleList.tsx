@@ -7,15 +7,14 @@ export type ExampleModel = {
     value: string;
 };
 
-const EXAMPLES: ExampleModel[] = [];
-// const EXAMPLES: ExampleModel[] = [
-//     {
-//         text: "What is included in my Northwind Health Plus plan that is not in standard?",
-//         value: "What is included in my Northwind Health Plus plan that is not in standard?"
-//     },
-//     { text: "What happens in a performance review?", value: "What happens in a performance review?" },
-//     { text: "What does a Product Manager do?", value: "What does a Product Manager do?" }
-// ];
+const EXAMPLES: ExampleModel[] = [
+    {
+        text: "How do I troubleshoot orders not processing?",
+        value: "How do I troubleshoot orders not processing?"
+    },
+    { text: "How does a developer add a migration?", value: "How does a developer add a migration?" },
+    { text: "Where can I find delivery status for an environment?", value: "Where can I find delivery status for an environment?" }
+];
 
 interface Props {
     onExampleClicked: (value: string) => void;
